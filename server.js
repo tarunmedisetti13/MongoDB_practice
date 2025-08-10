@@ -37,6 +37,7 @@ async function CheckEmailPresence(email) {
     return res;
 }
 
+//function that updates the document
 async function UpdateUserByEmail() {
     const email = "tharunmedisetti850@gmail.com";
     const res = await CheckEmailPresence(email);
@@ -53,6 +54,11 @@ async function UpdateUserByEmail() {
     }
 }
 
-//function that updates the document
+//function that delete by Name field
+async function deleteByName(params) {
+    const res = await User.findOneAndDelete({ name: { $regex: /^ashok$/i } });
+    console.log(res);
+}
 //insertUser();
-UpdateUserByEmail();
+//UpdateUserByEmail();
+deleteByName();
