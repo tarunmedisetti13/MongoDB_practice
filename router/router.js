@@ -1,8 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const router = express.Router();
-const { CreateUser, checkEmail, getPasswordbyEmail } = require('../model/dboperations');
-
+const { CreateUser, checkEmail, getPasswordbyEmail } = require('../model/Userdboperations');
 
 
 router.post('/add-user', async (req, res) => {

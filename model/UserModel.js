@@ -13,13 +13,7 @@ const userSchema = new mongoose.Schema({
     role: { type: String, default: 'customer' }
 }, { timestamps: true });
 
-const productSchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    description: { type: String },
-    price: { type: Number, required: true },
-    category: { type: String }
-}, { timestamps: true });
-const User = mongoose.model('User', userSchema);
-const Product = mongoose.model('Product', productSchema);
 
-module.exports = { User, Product };
+const User = mongoose.model('User', userSchema);
+
+module.exports = { User };
